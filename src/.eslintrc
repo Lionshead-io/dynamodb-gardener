@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "comma-dangle": ["off"],
+    "strict": "off"
+  }
+}

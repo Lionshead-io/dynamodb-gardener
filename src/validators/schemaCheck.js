@@ -24,7 +24,13 @@ export const hasItems = (file: { hash: string, keys: any, items: Array<Object> }
 };
 
 export const hasPartitionKey = (file: { hash: string, keys: any, items: Array<Object> }): Validation => {
-  return (_isObject(file) && file.keys.partition) ? (
+  const isValid = (_isObject(file) && Array.isArray(file.keys) && file.keys.length) && file.keys.reduce((acc, currVal) => {
+    if (acc === true) return acc;
+    else if (currVal.KeyType === 'HASH') return true;
+
+    return acc;
+  }, false);
+  return (isValid) ? (
     Validation.Success()
   ) : Validation.Failure(['The Table Definition file "keys" property should at the minimum have a partition Key defined.']);
 };

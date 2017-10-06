@@ -18,11 +18,8 @@ import Validation from 'folktale/validation';
 import logger, { logErrors } from './utils/logger';
 import mapFilesToValidation from './validators/mapFilesToValidation';
 import readAndValidateLandscaperConfig from './validators/dynamoLandscaperConfig';
-
-const dynamodb = new AWS.DynamoDB({
-  apiVersion: '2012-08-10',
-  region: 'us-east-1',
-});
+import { pollForTableStatus } from './services/describeTable';
+import seeder from './seeder';
 
 cli.version('1.0.0')
   .arguments('<none>')
@@ -34,32 +31,18 @@ console.log(chalk.green(`
 ═╩╝ ┴ ┘└┘┴ ┴┴ ┴└─┘═╩╝╚═╝  ╩═╝┴ ┴┘└┘─┴┘└─┘└─┘┴ ┴┴  └─┘┴└─
 `));
 
-
-// const a = readAndValidateLandscaperConfig().concat(mapFilesToValidation());
-
-const a = Validation.Success()
+Validation.Success()
             .concat(readAndValidateLandscaperConfig())
             .concat(mapFilesToValidation())
             .matchWith({
               Success: () => {
-                console.log('sucessful validation');
+                console.log(chalk.yellow('Seeding Tables...'));
+                seeder();
               },
               Failure: ({ value }) => {
                 logErrors(value);
-              }
+              },
             });
-
-// const a = mapFilesToValidation();
-console.log('\n');
-
-// const params = {
-//   TableName: 'foobar',
-// };
-// dynamodb.describeTable(params, (err, data) => {
-//   if (err) console.log(err, err.stack); // an error occurred
-//   else     console.log(data);
-// })
-
 
 // validateFile('user.json')
 //   .map(logger)

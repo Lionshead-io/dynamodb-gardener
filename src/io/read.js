@@ -16,9 +16,12 @@ import Result from 'folktale/result';
 import { IO } from 'monet';
 
 export const read = (file: string): IO => IO(() => fs.readFileSync(`${file}`, 'utf8'));
-
 export default read;
 
 export function readJSONFile(fileName: string): Result {
   return Result.try(() => read(fileName).map(file => JSON.parse(file)).run());
+}
+
+export function readDirectory(path: string): Result {
+  return Result.try(() => IO(() => fs.readdirSync(`${path}`, 'utf8')).run());
 }

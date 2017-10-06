@@ -1,7 +1,7 @@
 {
-  "name": "dynamodb-migrations",
+  "name": "dynamodb-landscaper",
   "version": "1.0.0",
-  "description": "AWS DynamoDB Migration CLI utility",
+  "description": "AWS DynamoDB table provisioner and seeder bundled as a CLI utility.",
   "homepage": "https://www.kriasoft.com/babel-starter-kit/",
   "repository": "Lionshead-io/dynamodb-migrations",
   "author": "Michael Iglesias <Mike.Iglesias11@gmail.com> (https://bit.ly/iglesias_linkedin)",
@@ -27,7 +27,7 @@
     "extends": "airbnb-base"
   },
   "bin": {
-    "dynamodb-migrations": "./dist/index.js"
+    "dynamodb-landscaper": "./dist/index.js"
   },
   "dependencies": {
     "aws-sdk": "^2.124.0",

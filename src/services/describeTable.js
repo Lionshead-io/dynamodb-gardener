@@ -11,9 +11,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 import AWS from 'aws-sdk';
-import { task, of, fromPromised, waitAll } from 'folktale/concurrency/task';
-import Result from 'folktale/result';
-import { IO } from 'monet';
+import { fromPromised } from 'folktale/concurrency/task';
 import Rx from 'rxjs';
 
 const dynamodb = new AWS.DynamoDB({

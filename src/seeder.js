@@ -1,18 +1,11 @@
-import fs from 'fs';
-import path from 'path';
-import AWS from 'aws-sdk';
 import R from 'ramda';
 import { isEqual as _isEqual } from 'lodash';
-import Result from 'folktale/result';
-import Maybe from 'folktale/maybe';
-import { task, of, fromPromised, waitAll } from 'folktale/concurrency/task';
 import hasha from 'hasha';
-import Validation from 'folktale/validation';
 import { readDirectory, readJSONFile } from './io/read';
 import { writeFile } from './io/write';
 import { isJSONFile } from './regex/index';
 import { createTable } from './services/createTable';
-import describeTableT, { describeTable, pollForTableStatus, pollForTableStatus2 } from './services/describeTable';
+import { pollForTableStatus2 } from './services/describeTable';
 import Dynamo from './services/Dynamo';
 import buildTableName from './utils/buildTableName';
 
@@ -59,10 +52,6 @@ const TableOperation = union('TableOperation', {
 });
 
 async function seeder() {
-  // const a1 = await R.pipeP(() => pollForTableStatus('lionshead-user-prod').run().promise())();
-  // console.log(a1, 'a1 -> pollForTableStatus');
-  // return;
-
   const [LandscaperConfig, baseFiles] = readJSONFile(`${process.cwd()}/dynamo-landscaper.config.json`)
                                             .chain(configResult => readDirectory(`${process.cwd()}`).map(dirResult => [configResult, dirResult]))
                                             .getOrElse([{}, []]);

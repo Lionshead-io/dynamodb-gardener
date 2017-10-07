@@ -2,7 +2,7 @@
   "name": "dynamodb-landscaper",
   "version": "1.0.0",
   "description": "AWS DynamoDB table provisioner and seeder bundled as a CLI utility.",
-  "homepage": "https://www.kriasoft.com/babel-starter-kit/",
+  "homepage": "https://github.com/Lionshead-io/dynamodb-gardener",
   "repository": "Lionshead-io/dynamodb-migrations",
   "author": "Michael Iglesias <Mike.Iglesias11@gmail.com> (https://bit.ly/iglesias_linkedin)",
   "contributors": [

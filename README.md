@@ -49,4 +49,4 @@ license.
 
 
 ---
-Made with ♥ by Lionshead Consulting Group ([Lionshead Consulting Group](https://github.com/Lionshead-io)) and [contributors](https://github.com/Lionshead-io/dynamodb-gardener/graphs/contributors)
+Made with ♥ by [Lionshead Consulting Group](https://github.com/Lionshead-io) and [contributors](https://github.com/Lionshead-io/dynamodb-gardener/graphs/contributors)

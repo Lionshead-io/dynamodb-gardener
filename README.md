@@ -1,4 +1,4 @@
-# Babel Starter Kit
+# DynamoDB Landscaper
 
 [![NPM version](http://img.shields.io/npm/v/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
 [![NPM downloads](http://img.shields.io/npm/dm/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
@@ -22,7 +22,7 @@
 
 ### Sponsors
 
-1. Lionshead Consulting Group
+####. Lionshead Consulting Group
 
 ### Documentation
 

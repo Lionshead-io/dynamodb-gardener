@@ -17,7 +17,12 @@ const TableOperation = union('TableOperation', {
     const KeySchema = value.TableFile.keys;
     const AttributeDefinitions = value.TableFile.AttributeDefinitions;
     const ProvisionedThroughput = value.TableFile.ProvisionedThroughput;
-    const items = value.TableFile.items;
+    const items = (function (i) {
+      if (Array.isArray(i)) return i;
+      else if (Array.isArray(i[value.Environment])) return i[value.Environment];
+
+      return i;
+    }(value.TableFile.items));
 
     return {
       getValue: R.pipeP(
@@ -56,10 +61,12 @@ async function seeder() {
                                             .chain(configResult => readDirectory(`${process.cwd()}`).map(dirResult => [configResult, dirResult]))
                                             .getOrElse([{}, []]);
 
-  await (async function worker() {
+  await (async function worker(Environments) {
+    if (Environments.length === 0) return;
+
     baseFiles.filter(currVal => (isJSONFile.test(currVal) && currVal !== 'dynamo-landscaper.config.json'))
       .forEach(async (currVal) => {
-        const TableName = buildTableName(LandscaperConfig.ProjectName, currVal.split('.')[0]);
+        const TableName = buildTableName(LandscaperConfig.ProjectName, currVal.split('.')[0], Environments[0]);
         const TableFile = readJSONFile(`${process.cwd()}/${currVal}`).getOrElse({});
 
         // Determine the type of data modelling required per file
@@ -75,6 +82,7 @@ async function seeder() {
             TableName,
             TableFile,
             LandscaperConfig,
+            Environment: Environments[0],
           });
 
           if (!TableFile.hash) return TableOperation.CreateAndWrite(payload);
@@ -131,7 +139,9 @@ async function seeder() {
           None: () => Promise.resolve(),
         });
       });
-  }());
+
+    return worker(Environments.splice(0, 1) && Environments) // eslint-disable-line
+  }(LandscaperConfig.Environments || ['prod']));
 }
 
 export default seeder;

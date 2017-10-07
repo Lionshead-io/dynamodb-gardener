@@ -20,7 +20,7 @@ export const hasHash = (file: { hash: string, keys: any, items: Array<Object> })
 };
 
 export const hasItems = (file: { hash: string, keys: any, items: Array<Object> }): Validation => {
-  return (_has(file, 'items') && _isArray(file.items)) ? Validation.Success() : Validation.Failure(['The Table Definition file must have a "items" property of type <array>.']);
+  return (_has(file, 'items') && (_isObject(file.items) || _isArray(file.items))) ? Validation.Success() : Validation.Failure(['The Table Definition file must have a "items" property of type <array>.']);
 };
 
 export const hasPartitionKey = (file: { hash: string, keys: any, items: Array<Object> }): Validation => {

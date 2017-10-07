@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-landscaper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AWS DynamoDB table provisioner and seeder bundled as a CLI utility.",
   "homepage": "https://github.com/Lionshead-io/dynamodb-gardener",
   "repository": "Lionshead-io/dynamodb-migrations",

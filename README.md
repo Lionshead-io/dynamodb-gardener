@@ -1,5 +1,6 @@
 # DynamoDB Landscaper
 
+
 [![NPM version](http://img.shields.io/npm/v/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
 [![NPM downloads](http://img.shields.io/npm/dm/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
 [![Dependency Status](http://img.shields.io/david/dev/Lionshead-io/dynamodb-gardener.svg?style=flat-square)](https://david-dm.org/Lionshead-io/dynamodb-gardener#info=devDependencies)
@@ -22,7 +23,7 @@
 
 ### Sponsors
 
-####. Lionshead Consulting Group
+### Lionshead Consulting Group
 
 ### Documentation
 

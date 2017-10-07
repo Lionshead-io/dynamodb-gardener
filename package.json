@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "AWS DynamoDB table provisioner and seeder bundled as a CLI utility.",
   "homepage": "https://github.com/Lionshead-io/dynamodb-gardener",
-  "repository": "Lionshead-io/dynamodb-migrations",
+  "repository": "Lionshead-io/dynamodb-gardener",
   "author": "Michael Iglesias <Mike.Iglesias11@gmail.com> (https://bit.ly/iglesias_linkedin)",
   "contributors": [
     "Michael Iglesias <Mike.Iglesias11@gmail.com>"
@@ -76,7 +76,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
     "prepublish": "npm run build",
-    "publish:docs": "easystatic deploy docs --repo Lionshead-io/dynamodb-migrations",
+    "publish:docs": "easystatic deploy docs --repo Lionshead-io/dynamodb-gardener",
     "start": "easystatic start docs"
   }
 }

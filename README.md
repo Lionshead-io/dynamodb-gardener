@@ -49,4 +49,4 @@ license.
 
 
 ---
-Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/babel-starter-kit/graphs/contributors)
+Made with ♥ by Lionshead Consulting Group ([Lionshead Consulting Group](https://github.com/Lionshead-io)) and [contributors](https://github.com/Lionshead-io/dynamodb-gardener/graphs/contributors)

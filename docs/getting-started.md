@@ -29,20 +29,27 @@ $ cd ./dynamodb-migrations
 $ touch dynamo-landscaper.config.json
 ```
 
-Run one, or a combination of the following commands to lint and test your code:
+### Step 4. Edit the `dynamo-landscaper.config.json` you created in Step 3 to match the following JSON schema.
 
-* `npm run lint`       — lint the source code with ESLint
-* `npm test`           — run unit tests with Mocha
-* `npm run test:watch` — run unit tests with Mocha, and watch files for changes
-* `npm run test:cover` — run unit tests with code coverage by Istanbul
-
-### How to Update
-
-Down the road you can fetch and merge the recent changes from this repo back into your project:
-
-```sh
-$ git checkout master
-$ git fetch babel-starter-kit
-$ git merge babel-starter-kit/master
-$ npm install
 ```
+{
+  "ProjectName": "<ProjectName>",
+  "Environments": ["...", "..."],
+  "Append": Boolean
+}
+```
+
+Example:
+```
+{
+  "ProjectName": "dynamodb-gardener",
+  "Environments": ["qa", "test", "prod"],
+  "Append": true
+}
+```
+
+|  Properties  |                                                                                                                                                                       Description                                                                                                                                                                       | Required | Type                                      |
+|:------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|-------------------------------------------|
+|  ProjectName |                                                                                                               A unique identifier of type 'string'. "vpcId" is the partition key of the DynamoDB Table in which Lionsnet stores all data.                                                                                                               |    yes   | string                                    |
+| Environments | An array of strings in which each item represents the name of an environment you want a corresponding DynamoDB table for                                                                                                                                                                                                                                | yes      | Array<string> (ex. ["qa", "test", "prod"] |
+| Append       | If "Append" is set to true. DynamoDB Landscaper/Gardner will provision tables with the Environment appended to the name of the table. For example, if you have a project named "foobar" with a list of the following Environments ["qa", "test", "prod"], the following tables will be provisioned: 1) 'foobar-qa', 2) 'foobar-test', 3) 'foobar-prod'. | yes      | Boolean                                   |

@@ -5,18 +5,28 @@ title: Getting Started ∙ DynamoDB Gardner/Landscaper
 
 # Getting Started
 
+### Step 1. Install dynamodb-landscaper from NPM
 For better experience, make sure that you have `npm v3+` installed.
 
 ```sh
 $ sudo npm install -g dynamodb-landscaper
 ```
 
-### How to Build
+### Step 2. Create a directory that will contain all of your table schemas and seeding data.
 
-Running `npm run build` will compile source files to a distributable format (CommonJS, ES6 and UMD)
-ready to be published to NPM from the `dist` folder. See `tools/build.js` for more info.
+In the root of your project directory, run the following command to create an empty directory...
 
-### How to Test
+```sh
+mkdir dynamodb-migrations
+```
+
+### Step 3. Inside of the new directory you just created in Step 2, create a dynamodb-landscaper.config.json file.
+
+> NOTE: the file name MUST be dynamo-landscaper.config.json
+
+```sh
+touch dynamo-landscaper.config.json
+```
 
 Run one, or a combination of the following commands to lint and test your code:
 

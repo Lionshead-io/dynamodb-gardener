@@ -1,4 +1,4 @@
-# DynamoDB Landscaper
+# DynamoDB Gardner/Landscaper
 
 
 [![NPM version](http://img.shields.io/npm/v/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
@@ -15,10 +15,6 @@
 &nbsp; &nbsp; ✓ Seed your DynamoDB tables based on environment (qa, test, staging, prod).<br>
 &nbsp; &nbsp; ✓ Integrate DynamoDB Landscaper/Gardner into your CI/CD pipelines
 
-### Sponsors
-
-### Lionshead Consulting Group
-
 ### Documentation
 
 * [Getting Started](docs/getting-started.md)
@@ -26,6 +22,8 @@
   * [Testing with <code>mocha</code> and <code>jsdom</code>](docs/recipes/testing-with-mocha-and-jsdom.md)
   * [Throwing errors with FB's <code>invariant</code> library](docs/recipes/throwing-errors-with-fbjs-invariant.md)
 
+
+### Maintained by Lionshead Consulting Group
 
 ### Get in Touch
 

@@ -1,29 +1,46 @@
 ---
-id: bsk:home
-title: Babel Starter Kit ∙ A project template for authoring and publishing JavaScript libraries
+id: dg:home
+title: DynamoDB Gardner/Landscaper ∙ AWS DynamoDB Table provisioner and seeder "DynamoDB Tables-as-Code"
 ---
 
-# Babel Starter Kit
+# DynamoDB Gardner/Landscaper
 
-Babel Starter Kit is a project template for authoring and publishing JavaScript libraries using
-[ES2015](https://babeljs.io/docs/learn-es2015/)+ via [Babel](https://babeljs.io/)
+
+[![NPM version](http://img.shields.io/npm/v/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
+[![NPM downloads](http://img.shields.io/npm/dm/dynamodb-landscaper.svg?style=flat-square)](https://www.npmjs.com/package/dynamodb-landscaper)
+[![Dependency Status](http://img.shields.io/david/dev/Lionshead-io/dynamodb-gardener.svg?style=flat-square)](https://david-dm.org/Lionshead-io/dynamodb-gardener#info=devDependencies)
+
+> AWS DynamoDB Table provisioner and seeder "DynamoDB Tables-as-Code"
+
 
 ### Features
 
-&nbsp; &nbsp; ✓ Author your code, including tests, in [ES2015](https://babeljs.io/docs/learn-es2015/)+ via [Babel](http://babeljs.io/)<br>
-&nbsp; &nbsp; ✓ Pre-configured unit tests with [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/) and [Sinon](http://sinonjs.org/)<br>
-&nbsp; &nbsp; ✓ Pre-configured test coverage with [Istanbul](https://github.com/gotwarlost/istanbul) and [Coveralls](https://coveralls.io/)<br>
-&nbsp; &nbsp; ✓ Generate a static site for your project via [Easystatic](https://easystatic.com)<br>
-&nbsp; &nbsp; ✓ [Yeoman](http://yeoman.io/) generator ([generator-javascript](https://github.com/kriasoft/babel-starter-kit/tree/yeoman-generator))<br>
-&nbsp; &nbsp; ✓ Cross-platform, minimum dependencies<br>
+&nbsp; &nbsp; ✓ Define your DynamoDB tables as code (Tables-as-Code)<br>
+&nbsp; &nbsp; ✓ Easily seed your DynamoDB tables<br>
+&nbsp; &nbsp; ✓ Seed your DynamoDB tables based on environment (qa, test, staging, prod).<br>
+&nbsp; &nbsp; ✓ Integrate DynamoDB Landscaper/Gardner into your CI/CD pipelines
 
-### Backers
+### Documentation
 
-♥ Babel Starter Kit? Help us keep it alive by [donating funds](https://www.patreon.com/tarkus) to cover project expenses!
+* [Getting Started](docs/getting-started.md)
+* [Recipes](recipes)
+  * [Testing with <code>mocha</code> and <code>jsdom</code>](recipes/testing-with-mocha-and-jsdom.md)
+  * [Throwing errors with FB's <code>invariant</code> library](recipes/throwing-errors-with-fbjs-invariant.md)
 
-<a href="https://github.com/koistya" target="_blank">
-  <img src="https://github.com/koistya.png?size=64" width="64" height="64">
-</a>
-<a href="https://www.patreon.com/tarkus" target="_blank">
-  <img src="https://opencollective.com/static/images/become_backer.svg" width="64" height="64">
-</a>
+
+
+### Maintained by Lionshead Consulting Group
+
+* [Homepage](https://github.com/Lionshead-io)
+
+
+### License
+
+Copyright © 2015-2016 Lionshead Consulting Group, LLC. This source code is licensed under the MIT license found in
+the [LICENSE.txt](https://github.com/Lionshead-io/dynamodb-gardener/blob/master/LICENSE.txt) file.
+The documentation to the project is licensed under the [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+license.
+
+
+---
+Made with ♥ by [Lionshead Consulting Group](https://github.com/Lionshead-io) and [contributors](https://github.com/Lionshead-io/dynamodb-gardener/graphs/contributors)

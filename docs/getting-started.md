@@ -1,34 +1,14 @@
 ---
-id: bsk:getting-started
-title: Getting Started ∙ Babel Starter Kit
+id: dg:getting-started
+title: Getting Started ∙ DynamoDB Gardner/Landscaper
 ---
 
 # Getting Started
 
-For better experience, make sure that you have `npm v3+` installed. Start by cloning this repo and
-installing project dependencies:
+For better experience, make sure that you have `npm v3+` installed.
 
 ```sh
-$ git clone -o babel-starter-kit \
-      -b master --single-branch \
-      https://github.com/kriasoft/babel-starter-kit.git \
-      <your-project-name>
-$ cd <your-project-name>
-$ npm install
-```
-
-Update your name in `LICENSE.txt` and project information in `package.json` and `README.md` files.
-Write your code in `src` folder, write tests in `test` folder. Run `npm run build` to compile the
-source code into a distributable format. Write documentation in markdown format in `docs` folder.
-Run `npm start` to launch a development server with the documentation site.
-
-Alternatively, start a new project with **Yeoman**:
-
-```sh
-$ npm install -g generator-javascript
-$ mkdir <your-project-name>
-$ cd <your-project-name>
-$ yo javascript
+$ sudo npm install -g dynamodb-landscaper
 ```
 
 ### How to Build

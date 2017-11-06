@@ -25,7 +25,8 @@ mkdir dynamodb-migrations
 > NOTE: the file name MUST be `dynamo-landscaper.config.json`
 
 ```sh
-touch dynamo-landscaper.config.json
+$ cd ./dynamodb-migrations
+$ touch dynamo-landscaper.config.json
 ```
 
 Run one, or a combination of the following commands to lint and test your code:

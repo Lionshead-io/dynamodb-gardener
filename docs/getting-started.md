@@ -22,7 +22,7 @@ mkdir dynamodb-migrations
 
 ### Step 3. Inside of the new directory you just created in Step 2, create a dynamodb-landscaper.config.json file.
 
-> NOTE: the file name MUST be dynamo-landscaper.config.json
+> NOTE: the file name MUST be `dynamo-landscaper.config.json`
 
 ```sh
 touch dynamo-landscaper.config.json

@@ -23,9 +23,8 @@
   * [Throwing errors with FB's <code>invariant</code> library](docs/recipes/throwing-errors-with-fbjs-invariant.md)
 
 
-### Maintained by Lionshead Consulting Group
 
-### Get in Touch
+### Maintained by Lionshead Consulting Group
 
 * [Homepage](https://github.com/Lionshead-io)
 

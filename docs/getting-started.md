@@ -53,3 +53,7 @@ Example:
 |  ProjectName |                                                                                                               A unique identifier of type 'string'. "vpcId" is the partition key of the DynamoDB Table in which Lionsnet stores all data.                                                                                                               |    yes   | string                                    |
 | Environments | An array of strings in which each item represents the name of an environment you want a corresponding DynamoDB table for                                                                                                                                                                                                                                | yes      | Array<string> (ex. ["qa", "test", "prod"]) |
 | Append       | If "Append" is set to true. DynamoDB Landscaper/Gardner will provision tables with the Environment appended to the name of the table. For example, if you have a project named "foobar" with a list of the following Environments ["qa", "test", "prod"], the following tables will be provisioned: 1) 'foobar-qa', 2) 'foobar-test', 3) 'foobar-prod'. If set to false, the Environment names will be prepended. | yes      | Boolean                                   |
+
+
+
+#### [Next: Start seeding your tables](docs/provision-seed-tables.md)

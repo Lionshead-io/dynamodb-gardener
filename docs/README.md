@@ -17,10 +17,8 @@
 
 ### Documentation
 
-* [Getting Started](docs/getting-started.md)
-* [Recipes](recipes)
-  * [Testing with <code>mocha</code> and <code>jsdom</code>](recipes/testing-with-mocha-and-jsdom.md)
-  * [Throwing errors with FB's <code>invariant</code> library](recipes/throwing-errors-with-fbjs-invariant.md)
+* [Getting Started](getting-started.md)
+* [Provision and Seed Tables](provision-seed-tables.md)
 
 
 

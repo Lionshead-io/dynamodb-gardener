@@ -56,4 +56,4 @@ Example:
 
 
 
-#### [Next: Start seeding your tables](docs/provision-seed-tables.md)
+#### [Next: Start seeding your tables](provision-seed-tables.md)

@@ -22,6 +22,8 @@ DynamoDB Gardner/Landscaper is a simple command line utility. It doesn't support
 $ dynamodb-landscaper
 ```
 
+### Table Definition Files
+
 
 ### Documentation
 
